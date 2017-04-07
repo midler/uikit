@@ -11,8 +11,11 @@ class Input extends Component {
     };
   }
 
-  handleChange(){
-    this.state.value = this.value;
+  handleChange(event){
+    this.setState({
+        value: event.target.value
+      }
+    )
   }
 
   render() {
@@ -22,7 +25,7 @@ class Input extends Component {
           className="input"
           placeholder={this.props.placeholder}
           value={this.state.value}
-          onChange={this.handleChange}
+          onChange={this.handleChange.bind(this)}
         />
     )
   }
