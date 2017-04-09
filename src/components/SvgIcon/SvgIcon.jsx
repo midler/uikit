@@ -15,12 +15,13 @@ class SvgIcon extends Component {
   render() {
     return (
         <svg
-          viewBox={'0 0 ' + this.state.width + ' ' + this.state.width}
+          viewBox='0 0 24 24'
           xmlns="http://www.w3.org/2000/svg"
           width={this.state.width}
           height={this.state.height}
           preserveAspectRatio="xMinYMin meet"
-        ><title>Menu</title>
+        >
+          <title>Menu</title>
           <path
             d="M2 6c0-.552.455-1 .992-1h18.016c.548 0 .992.444.992 1 0 .552-.455 1-.992 1H2.992C2.444 7 2 6.556 2 6zm0 6c0-.552.455-1 .992-1h18.016c.548 0 .992.444.992 1 0 .552-.455 1-.992 1H2.992C2.444 13 2 12.556 2 12zm0 6c0-.552.455-1 .992-1h18.016c.548 0 .992.444.992 1 0 .552-.455 1-.992 1H2.992C2.444 19 2 18.556 2 18z"
             fill={this.state.fill}

@@ -1,6 +1,42 @@
 .input {
-  border:2px solid #989898;
-  color: #333333;
-  padding: 10px;
-  font-size: 20px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  background-image: none;
+  background-clip: padding-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: solid 1px #e8e8e8;
+  font-family: OpenSans, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #0c1729;
+  transition: all .2s ease-in-out;
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+
+  &:focus,
+  &_focus {
+    border: solid 1px #2aa86e;
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  &::placeholder {
+    color: #999999;
+    opacity: 1;
+  }
+
+  &:disabled,
+  &[readonly],
+  &_disabled {
+    background-color: $input-bg-disabled;
+    opacity: 1;
+    background-color: #cccccc;
+    color: white;
+    cursor: not-allowed;
+  }
 }
